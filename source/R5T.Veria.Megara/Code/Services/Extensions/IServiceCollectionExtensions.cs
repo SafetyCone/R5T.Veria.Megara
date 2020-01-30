@@ -16,7 +16,7 @@ namespace R5T.Veria.Megara
         /// <summary>
         /// Adds the <see cref="RoundTripFileSerializationVerifier{T}"/> implementation of the <see cref="IRoundTripFileSerializationVerifier{T}"/> service.
         /// </summary>
-        private static IServiceCollection AddRoundTripFileSerializationVerifier<TValue>(this IServiceCollection services,
+        public static IServiceCollection AddRoundTripFileSerializationVerifier<TValue>(this IServiceCollection services,
             ServiceAction<IHumanOutput> addHumanOutput,
             ServiceAction<IFileEqualityComparer> addFileEqualityComparer,
             ServiceAction<IFileSerializer<TValue>> addFileSerializer,
@@ -36,7 +36,7 @@ namespace R5T.Veria.Megara
         /// <summary>
         /// Adds the <see cref="RoundTripFileSerializationVerifier{T}"/> implementation of the <see cref="IRoundTripFileSerializationVerifier{T}"/> service.
         /// </summary>
-        private static ServiceAction<IRoundTripFileSerializationVerifier<TValue>> AddRoundTripFileSerializationVerifierAction<TValue>(this IServiceCollection services,
+        public static ServiceAction<IRoundTripFileSerializationVerifier<TValue>> AddRoundTripFileSerializationVerifierAction<TValue>(this IServiceCollection services,
             ServiceAction<IHumanOutput> addHumanOutput,
             ServiceAction<IFileEqualityComparer> addFileEqualityComparer,
             ServiceAction<IFileSerializer<TValue>> addFileSerializer,
