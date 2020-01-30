@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\R5T.Bath.Base\source\R5T.Bath.Base\R5T.Bath.Base.csproj" />
     <ProjectReference Include="..\..\..\R5T.Bedford.Base\source\R5T.Bedford.Base\R5T.Bedford.Base.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Dacia.Extensions\source\R5T.Dacia.Extensions\R5T.Dacia.Extensions.csproj" />
     <ProjectReference Include="..\..\..\R5T.Megara.Base\source\R5T.Megara.Base\R5T.Megara.Base.csproj" />
     <ProjectReference Include="..\..\..\R5T.Vandalia.Base\source\R5T.Vandalia.Base\R5T.Vandalia.Base.csproj" />
     <ProjectReference Include="..\..\..\R5T.Veria.Base\source\R5T.Veria.Base\R5T.Veria.Base.csproj" />
