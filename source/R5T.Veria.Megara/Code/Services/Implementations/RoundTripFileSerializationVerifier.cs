@@ -23,8 +23,8 @@ namespace R5T.Veria.Megara
             IValueEqualityComparer<T> valueEqualityComparer)
         {
             this.HumanOutput = humanOutput;
-            this.FileSerializer = FileSerializer;
-            this.FileEqualityComparer = FileEqualityComparer;
+            this.FileSerializer = fileSerializer;
+            this.FileEqualityComparer = fileEqualityComparer;
             this.ValueEqualityComparer = valueEqualityComparer;
         }
 
