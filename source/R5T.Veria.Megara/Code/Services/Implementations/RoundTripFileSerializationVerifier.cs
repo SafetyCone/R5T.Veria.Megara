@@ -5,10 +5,13 @@ using R5T.Bedford;
 using R5T.Megara;
 using R5T.Vandalia;
 
+using R5T.T0064;
+
 
 namespace R5T.Veria.Megara
 {
-    public class RoundTripFileSerializationVerifier<T> : IRoundTripFileSerializationVerifier<T>
+    [ServiceImplementationMarker]
+    public class RoundTripFileSerializationVerifier<T> : IRoundTripFileSerializationVerifier<T>, IServiceImplementation
     {
         private IHumanOutput HumanOutput { get; }
         private IFileSerializer<T> FileSerializer { get; }
