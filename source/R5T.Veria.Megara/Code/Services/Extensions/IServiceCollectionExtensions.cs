@@ -17,10 +17,10 @@ namespace R5T.Veria.Megara
         /// Adds the <see cref="RoundTripFileSerializationVerifier{T}"/> implementation of the <see cref="IRoundTripFileSerializationVerifier{T}"/> service.
         /// </summary>
         public static IServiceCollection AddRoundTripFileSerializationVerifier<TValue>(this IServiceCollection services,
-            ServiceAction<IHumanOutput> addHumanOutput,
-            ServiceAction<IFileEqualityComparer> addFileEqualityComparer,
-            ServiceAction<IFileSerializer<TValue>> addFileSerializer,
-            ServiceAction<IValueEqualityComparer<TValue>> addValueEqualityComparer)
+            IServiceAction<IHumanOutput> addHumanOutput,
+            IServiceAction<IFileEqualityComparer> addFileEqualityComparer,
+            IServiceAction<IFileSerializer<TValue>> addFileSerializer,
+            IServiceAction<IValueEqualityComparer<TValue>> addValueEqualityComparer)
         {
             services
                 .AddSingleton<IRoundTripFileSerializationVerifier<TValue>, RoundTripFileSerializationVerifier<TValue>>()
@@ -37,10 +37,10 @@ namespace R5T.Veria.Megara
         /// Adds the <see cref="RoundTripFileSerializationVerifier{T}"/> implementation of the <see cref="IRoundTripFileSerializationVerifier{T}"/> service.
         /// </summary>
         public static ServiceAction<IRoundTripFileSerializationVerifier<TValue>> AddRoundTripFileSerializationVerifierAction<TValue>(this IServiceCollection services,
-            ServiceAction<IHumanOutput> addHumanOutput,
-            ServiceAction<IFileEqualityComparer> addFileEqualityComparer,
-            ServiceAction<IFileSerializer<TValue>> addFileSerializer,
-            ServiceAction<IValueEqualityComparer<TValue>> addValueEqualityComparer)
+            IServiceAction<IHumanOutput> addHumanOutput,
+            IServiceAction<IFileEqualityComparer> addFileEqualityComparer,
+            IServiceAction<IFileSerializer<TValue>> addFileSerializer,
+            IServiceAction<IValueEqualityComparer<TValue>> addValueEqualityComparer)
         {
             var serviceAction = new ServiceAction<IRoundTripFileSerializationVerifier<TValue>>(() => services.AddRoundTripFileSerializationVerifier(
                 addHumanOutput,
